@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<div id="impress"  data-perspective="500">
+    <div  class="step" data-x="-1000" data-y="-1500">
+       <img src="images/first.png" class="firstimg">
+       <img src="images/story.png" class = "story">
+       <img src="images/miyizs.png" class = "miyizs">
+       <img src="images/per.png" class="per">
+    </div>
+    
+    <div class="step secpart" data-x="-1000" data-y="-1500" data-z="-1500">
+        目前担任产品助理
+    </div>
+
+    <div class="step" data-x="-1000" data-y="-1500" data-z="-3000" data-scale="0.1">
+        <img src="images/slide3.png">
+    </div>
+
+    <div class="step soft" id="ing" data-x="1000" data-y="1000" data-rotate-y="90">
+        <p>熟悉使用</p>
+        <b class="positioning">
+            <img src="images/v.png">
+            <img src="images/a.png">
+            <img src="images/p.png">
+            <img src="images/k.png">
+        </b>
+        <b class="positioning2">
+            <img src="images/x.png">
+            <img src="images/s.png">
+            <img src="images/b.png">
+        </b>  
+    </div>
+
+    <div class="step" id="slide5" data-x="1000" data-y="2400" data-rotate-x="90">
+        <span class="but">但是</span>
+        <img src="images/dot.png" class="dot">
+    </br>
+        <span class="hope">我希望可以学一些更</span>
+        <img src="images/interesting.png" class="interesting">
+        <span class="things">的东西</span>
+    </div>
+
+    <div class="step study" data-x="1000" data-y="3400">
+        <img src="images/r.png">
+    </div>
+    
+    <div class="step" id="slide7" data-x="1500" data-y="3650" data-rotate="90">
+        全面的学习了<span>JavaScript</span>，理解了很多以前不懂的东西如：事件代理，ajax，懒加载，面向对象，继承，原型 ...
+    </div>
+
+    <div class="step" data-x="1500" data-y="5000" data-rotate="90" >
+        认识了很多一起学习的小伙伴
+    </div>
+
+    <div class="step" id="slide9" data-x="1450" data-y="5000"  data-rotate="90"  data-rotate-y="90"class="today">
+        <span class="moving3">完成了今天的</span><img src="images/i.jpg" class="moving"><span class="moving2">制作</span>
+    </div>
+
+    <div class="step" id="slide10">
+        当然这只是一个开始</br>以后还要深入的学习下去！
+    </div>
+
+</div>
+
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+
